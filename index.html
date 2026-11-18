@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#103d31">
+  <title>HipoBuy spreadsheet | Browse Finds, Compare Prices & Check QC</title>
+  <meta name="description" content="Browse the HipoBuy spreadsheet with real HipobuyFind listings, USD price estimates, and a practical checklist for sizes, QC photos, and shipping costs.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="HipoBuy spreadsheet | Product Finds & Buying Guide">
+  <meta property="og:description" content="Browse real HipobuyFind listings and check sizing, QC photos, and shipping before you order.">
+  <!-- index.html. Google and Bing submission is pending until this page has a public URL and verified site access. -->
+  <!-- Search review: SSFinds covers links, QC and first orders. Repsheet emphasizes catalog breadth and QC. This page adds direct listing IDs, reference prices and checks tied to each product. Exact Google first-page positions were not independently verified. -->
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172b24;
+      --muted: #4d6158;
+      --green: #103d31;
+      --line: #d4ded5;
+      --paper: #f5f6ef;
+      --white: #fff;
+      --lime: #d7f58e;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 1rem; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 1rem/1.6 system-ui, sans-serif;
+    }
+    a { color: var(--green); text-underline-offset: .2em; }
+    :focus-visible { outline: 3px solid #a56312; outline-offset: 4px; }
+    .wrap { width: min(70rem, calc(100% - 2rem)); margin-inline: auto; }
+    .top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: .6rem 1.5rem;
+      padding-block: 1rem;
+    }
+    .top a { font-weight: 700; }
+    .top nav { display: flex; flex-wrap: wrap; gap: .5rem 1rem; }
+    .hero {
+      padding: clamp(3rem, 8vw, 7rem) 1rem;
+      border-radius: 1.4rem;
+      background: radial-gradient(ellipse at 85% 0%, #297150, transparent 65%), var(--green);
+      color: var(--white);
+      text-align: center;
+    }
+    h1, h2, h3, p { margin: 0; }
+    h1, h2 {
+      font-family: Georgia, serif;
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: -.045em;
+    }
+    h1 { font-size: clamp(2.7rem, 8vw, 6.1rem); }
+    h2 { font-size: clamp(2rem, 4.5vw, 3.25rem); }
+    h3 { font-size: 1.05rem; line-height: 1.3; }
+    .hero p { max-width: 38rem; margin: 1rem auto 1.5rem; color: #e4eee7; }
+    .actions, .categories { display: flex; flex-wrap: wrap; gap: .65rem; }
+    .actions { justify-content: center; }
+    .button, .categories a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: .55rem 1rem;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .button { background: var(--lime); color: #172b24; }
+    .button.secondary { background: transparent; border-color: #b5d2c3; color: var(--white); }
+    .button:hover, .categories a:hover { text-decoration: underline; }
+    section { padding-block: clamp(2rem, 5vw, 4rem); }
+    section > p, footer { color: var(--muted); }
+    section > p { margin-top: .75rem; max-width: 52rem; }
+    .categories { margin: 1rem 0; }
+    .categories a { background: var(--white); border-color: var(--line); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+      gap: .85rem;
+    }
+    article, details {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      padding: 1.2rem;
+    }
+    article { display: grid; align-content: start; gap: .55rem; }
+    .item-meta, article p, details p { color: var(--muted); }
+    .item-meta { font-size: .85rem; }
+    .price { color: var(--green); font-size: 1.3rem; font-weight: 750; }
+    article a { font-weight: 700; }
+    .guide { border-top: 1px solid var(--line); }
+    .guide .grid, .faq { margin-top: 1rem; }
+    details + details { margin-top: .65rem; }
+    summary { cursor: pointer; font-weight: 700; }
+    details p { margin-top: .55rem; }
+    footer { padding: 1.35rem 0 2rem; border-top: 1px solid var(--line); font-size: .9rem; }
+  </style>
+<link rel="canonical" href="https://kakobuyfinds.github.io/znkwk/">
+</head>
+<body>
+  <header class="top wrap">
+    <a href="https://hipobuyfind.com/">HipobuyFind</a>
+    <nav aria-label="On this page">
+      <a href="#catalog">Catalog</a>
+      <a href="#buying-guide">Buying guide</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <h1>HipoBuy spreadsheet</h1>
+      <p>Find shoes, hoodies, and tees from the HipobuyFind catalog. Compare listing prices in USD, then check sizing, QC photos, and shipping before you buy.</p>
+      <div class="actions">
+        <a class="button" href="https://hipobuyfind.com/">HipoBuy spreadsheet</a>
+        <a class="button secondary" href="https://hipobuyfind.com/">Buy it now</a>
+      </div>
+    </div>
+
+    <section id="catalog" aria-labelledby="catalog-title">
+      <h2 id="catalog-title">Browse the product catalog</h2>
+      <p>These listings come from HipobuyFind. USD figures are approximate item prices and exclude shipping, fees, and taxes. Open the listing to confirm the current price and options.</p>
+      <nav class="categories" aria-label="HipobuyFind product categories">
+        <a href="https://hipobuyfind.com/category-911-Shoes.html">Shoes</a>
+        <a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html">Hoodies &amp; sweaters</a>
+        <a href="https://hipobuyfind.com/category-913-T-Shirts.html">T-shirts</a>
+        <a href="https://hipobuyfind.com/category-914-Jackets.html">Jackets</a>
+        <a href="https://hipobuyfind.com/category-924-Bags.html">Bags</a>
+      </nav>
+      <div class="grid">
+        <article>
+          <p class="item-meta">Shoes · Item 148261</p>
+          <h3>Black and Red Basketball Sneakers</h3>
+          <p><span class="price">≈ $20.14</span> · ¥145.00</p>
+          <p>Compare your foot length with the seller’s size chart.</p>
+          <a href="https://hipobuyfind.com/goods-148261.html">View basketball sneakers</a>
+        </article>
+        <article>
+          <p class="item-meta">Shoes · Item 148189</p>
+          <h3>Leather Dress Shoes</h3>
+          <p><span class="price">≈ $55.56</span> · ¥400.00</p>
+          <p>Check the lining, sole material, and fit guidance.</p>
+          <a href="https://hipobuyfind.com/goods-148189.html">View leather dress shoes</a>
+        </article>
+        <article>
+          <p class="item-meta">Hoodies · Item 154917</p>
+          <h3>Fleece-Lined Hoodie</h3>
+          <p><span class="price">≈ $23.61</span> · ¥170.00</p>
+          <p>Compare chest width and sleeve length with a hoodie you own.</p>
+          <a href="https://hipobuyfind.com/goods-154917.html">View fleece-lined hoodie</a>
+        </article>
+        <article>
+          <p class="item-meta">T-shirts · Item 154920</p>
+          <h3>Graphic Short-Sleeve T-Shirt</h3>
+          <p><span class="price">≈ $14.58</span> · ¥105.00</p>
+          <p>Check garment width, body length, and print placement.</p>
+          <a href="https://hipobuyfind.com/goods-154920.html">View graphic T-shirt</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="buying-guide" class="guide" aria-labelledby="guide-title">
+      <h2 id="guide-title">How to use the HipoBuy spreadsheet</h2>
+      <div class="grid">
+        <article>
+          <h3>Confirm the item and size</h3>
+          <p>Open the product listing and check its item ID, color, size chart, stock, and current price. For clothing, compare the seller’s flat measurements with a garment you already own.</p>
+        </article>
+        <article>
+          <h3>Check the total cost</h3>
+          <p>Add domestic delivery, agent fees, international shipping, and applicable taxes to the item price. Ask how the shipping line calculates billable weight, especially if you plan to keep bulky packaging.</p>
+        </article>
+        <article>
+          <h3>Review QC photos before dispatch</h3>
+          <p>If your agent provides warehouse photos, match the color and size label to your order. Check stitching, soles or prints as appropriate, and review the return window before approving dispatch.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq" class="guide" aria-labelledby="faq-title">
+      <h2 id="faq-title">HipoBuy spreadsheet FAQ</h2>
+      <div class="faq">
+        <details>
+          <summary>What is a HipoBuy spreadsheet?</summary>
+          <p>It is a shopping directory that groups product links by category, so you can compare listings and build a shortlist before choosing what to order.</p>
+        </details>
+        <details>
+          <summary>Are the USD prices the final amount I pay?</summary>
+          <p>The cards show approximate conversions of listed item prices from CNY. Your total depends on the variant, the exchange rate used at checkout, service fees, shipping, and taxes.</p>
+        </details>
+        <details>
+          <summary>Where can I see QC photos?</summary>
+          <p>Check your shopping agent’s warehouse or order page once the item arrives. Photo availability and the cost of additional views depend on the agent and order.</p>
+        </details>
+        <details>
+          <summary>Where do the product links take me?</summary>
+          <p>Product cards open their matching HipobuyFind listings. The two buttons at the top open the HipobuyFind homepage.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    Independent shopping guide. Product data from <a href="https://hipobuyfind.com/">HipobuyFind</a>.
+  </footer>
+</body>
+</html>
